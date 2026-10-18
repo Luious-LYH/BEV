@@ -1,0 +1,19 @@
+name: bev
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - python=3.8.20
+  - pip
+  - pytorch=2.0.1
+  - torchvision=0.15.2
+  - torchaudio=2.0.2
+  - pytorch-cuda=11.8
+  - pip:
+      - numpy==1.23.5
+      - openmim
+      - packaging
+      - ninja
+      - pyquaternion
+      - nuscenes-devkit

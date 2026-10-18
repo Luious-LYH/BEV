@@ -1,0 +1,27 @@
+diff --git a/models/csrc/wrapper.py b/models/csrc/wrapper.py
+index 26d73c3..3b7e556 100644
+--- a/models/csrc/wrapper.py
++++ b/models/csrc/wrapper.py
+@@ -1,7 +1,11 @@
+ import torch
+ import torch.nn.functional as F
+-from ._msmv_sampling_cuda import _ms_deform_attn_cuda_c2345_forward, _ms_deform_attn_cuda_c2345_backward
+-from ._msmv_sampling_cuda import _ms_deform_attn_cuda_c23456_forward, _ms_deform_attn_cuda_c23456_backward
++try:
++    from ._msmv_sampling_cuda import _ms_deform_attn_cuda_c2345_forward, _ms_deform_attn_cuda_c2345_backward
++    from ._msmv_sampling_cuda import _ms_deform_attn_cuda_c23456_forward, _ms_deform_attn_cuda_c23456_backward
++    HAS_CUDA = True
++except (ImportError, ModuleNotFoundError):
++    HAS_CUDA = False
+ 
+ 
+ def msmv_sampling_pytorch(mlvl_feats, sampling_locations, scale_weights):
+@@ -79,6 +83,8 @@ class MSMVSamplingC23456(torch.autograd.Function):
+ 
+ 
+ def msmv_sampling(mlvl_feats, sampling_locations, scale_weights):
++    if not HAS_CUDA:
++        return msmv_sampling_pytorch(mlvl_feats, sampling_locations, scale_weights)
+     sampling_locations = sampling_locations.contiguous()
+     scale_weights = scale_weights.contiguous()
+     if len(mlvl_feats) == 4:

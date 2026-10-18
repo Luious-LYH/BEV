@@ -1,0 +1,56 @@
+{
+  "our_model": {
+    "checkpoint": "/public/lyh/projects/BEV/outputs/checkpoints/bevdet_occ_real_best.pth",
+    "miou_percent": 44.71,
+    "camera_masked_iou": {
+      "others": 0.0,
+      "barrier": null,
+      "bicycle": null,
+      "bus": null,
+      "car": 45.22,
+      "construction_vehicle": null,
+      "motorcycle": null,
+      "pedestrian": 15.21,
+      "traffic_cone": 0.0,
+      "trailer": null,
+      "truck": null,
+      "driveable_surface": 88.49,
+      "other_flat": 0.0,
+      "sidewalk": 70.84,
+      "terrain": 0.0,
+      "manmade": 53.34,
+      "vegetation": 54.07,
+      "free": 93.7
+    },
+    "avg_latency_ms": 304.42,
+    "fps": 3.28,
+    "samples_evaluated": 15
+  },
+  "official": {
+    "checkpoint": "/public/lyh/pretrained_model/BEV/bevdet/bevdet-occ-r50-4d-stereo_384704-24e.pth",
+    "miou_percent": 28.72,
+    "camera_masked_iou": {
+      "others": 0.0,
+      "barrier": null,
+      "bicycle": null,
+      "bus": null,
+      "car": 45.19,
+      "construction_vehicle": null,
+      "motorcycle": 0.0,
+      "pedestrian": 19.87,
+      "traffic_cone": 0.0,
+      "trailer": 0.0,
+      "truck": null,
+      "driveable_surface": 88.07,
+      "other_flat": 0.0,
+      "sidewalk": 69.52,
+      "terrain": 0.0,
+      "manmade": 59.31,
+      "vegetation": 62.65,
+      "free": 94.16
+    },
+    "avg_latency_ms": 267.45,
+    "fps": 3.74,
+    "samples_evaluated": 15
+  }
+}

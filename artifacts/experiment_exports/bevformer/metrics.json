@@ -1,0 +1,15 @@
+{
+  "experiment_id": "EXP-001_bevformer_real_e10",
+  "model": "BEVFormer-Small",
+  "epochs": 10,
+  "steps": 3230,
+  "initial_loss": 4014.3329,
+  "final_loss": 3996.1220,
+  "initial_cls_loss": 0.5580,
+  "final_cls_loss": 0.0951,
+  "cls_loss_reduction_pct": 82.96,
+  "total_time_sec": 2603.1,
+  "peak_allocated_vram_mb": 6675.82,
+  "checkpoint_path": "/public/lyh/projects/BEV/outputs/checkpoints/bevformer_small_real_best.pth",
+  "checkpoint_size_mb": 228.0
+}

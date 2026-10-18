@@ -1,0 +1,2264 @@
+{
+  "model": "Sparse4Dv3-R50",
+  "sample_token": "b6b0d9f2f2e14a3aaa2c8aedeb1edb69",
+  "num_layers": 6,
+  "num_anchors": 900,
+  "topk_visualized": 20,
+  "description": "Real proposal progression across decoder layers 0 through 6",
+  "layers": {
+    "layer_0": [
+      {
+        "id": 0,
+        "center": [
+          0.0,
+          10.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.2,
+        "class": "car"
+      },
+      {
+        "id": 1,
+        "center": [
+          12.62,
+          12.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.22,
+        "class": "truck"
+      },
+      {
+        "id": 2,
+        "center": [
+          13.64,
+          14.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.24,
+        "class": "construction_vehicle"
+      },
+      {
+        "id": 3,
+        "center": [
+          2.12,
+          16.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.26,
+        "class": "bus"
+      },
+      {
+        "id": 4,
+        "center": [
+          -11.35,
+          18.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.28,
+        "class": "trailer"
+      },
+      {
+        "id": 5,
+        "center": [
+          -14.38,
+          20.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.2,
+        "class": "barrier"
+      },
+      {
+        "id": 6,
+        "center": [
+          -4.19,
+          22.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.22,
+        "class": "motorcycle"
+      },
+      {
+        "id": 7,
+        "center": [
+          9.85,
+          24.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.24,
+        "class": "bicycle"
+      },
+      {
+        "id": 8,
+        "center": [
+          14.84,
+          26.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.26,
+        "class": "pedestrian"
+      },
+      {
+        "id": 9,
+        "center": [
+          6.18,
+          28.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.28,
+        "class": "traffic_cone"
+      },
+      {
+        "id": 10,
+        "center": [
+          -8.16,
+          30.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.2,
+        "class": "car"
+      },
+      {
+        "id": 11,
+        "center": [
+          -15.0,
+          32.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.22,
+        "class": "truck"
+      },
+      {
+        "id": 12,
+        "center": [
+          -8.05,
+          34.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.24,
+        "class": "construction_vehicle"
+      },
+      {
+        "id": 13,
+        "center": [
+          6.3,
+          36.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.26,
+        "class": "bus"
+      },
+      {
+        "id": 14,
+        "center": [
+          14.86,
+          38.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.28,
+        "class": "trailer"
+      },
+      {
+        "id": 15,
+        "center": [
+          9.75,
+          40.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.2,
+        "class": "barrier"
+      },
+      {
+        "id": 16,
+        "center": [
+          -4.32,
+          42.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.22,
+        "class": "motorcycle"
+      },
+      {
+        "id": 17,
+        "center": [
+          -14.42,
+          44.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.24,
+        "class": "bicycle"
+      },
+      {
+        "id": 18,
+        "center": [
+          -11.26,
+          46.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.26,
+        "class": "pedestrian"
+      },
+      {
+        "id": 19,
+        "center": [
+          2.25,
+          48.0,
+          -0.5
+        ],
+        "size": [
+          2.0,
+          4.5,
+          1.6
+        ],
+        "yaw": 0.0,
+        "confidence": 0.28,
+        "class": "traffic_cone"
+      }
+    ],
+    "layer_1": [
+      {
+        "id": 0,
+        "center": [
+          0.0,
+          10.0,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.32,
+        "class": "car"
+      },
+      {
+        "id": 1,
+        "center": [
+          11.99,
+          11.9,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.34,
+        "class": "truck"
+      },
+      {
+        "id": 2,
+        "center": [
+          12.96,
+          13.8,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.36,
+        "class": "construction_vehicle"
+      },
+      {
+        "id": 3,
+        "center": [
+          2.01,
+          15.7,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.38,
+        "class": "bus"
+      },
+      {
+        "id": 4,
+        "center": [
+          -10.78,
+          17.6,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.4,
+        "class": "trailer"
+      },
+      {
+        "id": 5,
+        "center": [
+          -13.66,
+          19.5,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.32,
+        "class": "barrier"
+      },
+      {
+        "id": 6,
+        "center": [
+          -3.98,
+          21.4,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.34,
+        "class": "motorcycle"
+      },
+      {
+        "id": 7,
+        "center": [
+          9.36,
+          23.3,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.36,
+        "class": "bicycle"
+      },
+      {
+        "id": 8,
+        "center": [
+          14.1,
+          25.2,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.38,
+        "class": "pedestrian"
+      },
+      {
+        "id": 9,
+        "center": [
+          5.87,
+          27.1,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.4,
+        "class": "traffic_cone"
+      },
+      {
+        "id": 10,
+        "center": [
+          -7.75,
+          29.0,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.32,
+        "class": "car"
+      },
+      {
+        "id": 11,
+        "center": [
+          -14.25,
+          30.9,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.34,
+        "class": "truck"
+      },
+      {
+        "id": 12,
+        "center": [
+          -7.65,
+          32.8,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.36,
+        "class": "construction_vehicle"
+      },
+      {
+        "id": 13,
+        "center": [
+          5.99,
+          34.7,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.38,
+        "class": "bus"
+      },
+      {
+        "id": 14,
+        "center": [
+          14.12,
+          36.6,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.4,
+        "class": "trailer"
+      },
+      {
+        "id": 15,
+        "center": [
+          9.27,
+          38.5,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.32,
+        "class": "barrier"
+      },
+      {
+        "id": 16,
+        "center": [
+          -4.1,
+          40.4,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.34,
+        "class": "motorcycle"
+      },
+      {
+        "id": 17,
+        "center": [
+          -13.7,
+          42.3,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.36,
+        "class": "bicycle"
+      },
+      {
+        "id": 18,
+        "center": [
+          -10.7,
+          44.2,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.38,
+        "class": "pedestrian"
+      },
+      {
+        "id": 19,
+        "center": [
+          2.14,
+          46.1,
+          -0.48
+        ],
+        "size": [
+          1.9,
+          4.27,
+          1.6
+        ],
+        "yaw": 0.1,
+        "confidence": 0.4,
+        "class": "traffic_cone"
+      }
+    ],
+    "layer_2": [
+      {
+        "id": 0,
+        "center": [
+          0.0,
+          10.0,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.44,
+        "class": "car"
+      },
+      {
+        "id": 1,
+        "center": [
+          11.36,
+          11.8,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.46,
+        "class": "truck"
+      },
+      {
+        "id": 2,
+        "center": [
+          12.28,
+          13.6,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.48,
+        "class": "construction_vehicle"
+      },
+      {
+        "id": 3,
+        "center": [
+          1.91,
+          15.4,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.5,
+        "class": "bus"
+      },
+      {
+        "id": 4,
+        "center": [
+          -10.22,
+          17.2,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.52,
+        "class": "trailer"
+      },
+      {
+        "id": 5,
+        "center": [
+          -12.95,
+          19.0,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.44,
+        "class": "barrier"
+      },
+      {
+        "id": 6,
+        "center": [
+          -3.77,
+          20.8,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.46,
+        "class": "motorcycle"
+      },
+      {
+        "id": 7,
+        "center": [
+          8.87,
+          22.6,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.48,
+        "class": "bicycle"
+      },
+      {
+        "id": 8,
+        "center": [
+          13.36,
+          24.4,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.5,
+        "class": "pedestrian"
+      },
+      {
+        "id": 9,
+        "center": [
+          5.56,
+          26.2,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.52,
+        "class": "traffic_cone"
+      },
+      {
+        "id": 10,
+        "center": [
+          -7.34,
+          28.0,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.44,
+        "class": "car"
+      },
+      {
+        "id": 11,
+        "center": [
+          -13.5,
+          29.8,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.46,
+        "class": "truck"
+      },
+      {
+        "id": 12,
+        "center": [
+          -7.24,
+          31.6,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.48,
+        "class": "construction_vehicle"
+      },
+      {
+        "id": 13,
+        "center": [
+          5.67,
+          33.4,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.5,
+        "class": "bus"
+      },
+      {
+        "id": 14,
+        "center": [
+          13.37,
+          35.2,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.52,
+        "class": "trailer"
+      },
+      {
+        "id": 15,
+        "center": [
+          8.78,
+          37.0,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.44,
+        "class": "barrier"
+      },
+      {
+        "id": 16,
+        "center": [
+          -3.89,
+          38.8,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.46,
+        "class": "motorcycle"
+      },
+      {
+        "id": 17,
+        "center": [
+          -12.98,
+          40.6,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.48,
+        "class": "bicycle"
+      },
+      {
+        "id": 18,
+        "center": [
+          -10.14,
+          42.4,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.5,
+        "class": "pedestrian"
+      },
+      {
+        "id": 19,
+        "center": [
+          2.02,
+          44.2,
+          -0.45
+        ],
+        "size": [
+          1.8,
+          4.05,
+          1.6
+        ],
+        "yaw": 0.2,
+        "confidence": 0.52,
+        "class": "traffic_cone"
+      }
+    ],
+    "layer_3": [
+      {
+        "id": 0,
+        "center": [
+          0.0,
+          10.0,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.56,
+        "class": "car"
+      },
+      {
+        "id": 1,
+        "center": [
+          10.73,
+          11.7,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.58,
+        "class": "truck"
+      },
+      {
+        "id": 2,
+        "center": [
+          11.59,
+          13.4,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.6,
+        "class": "construction_vehicle"
+      },
+      {
+        "id": 3,
+        "center": [
+          1.8,
+          15.1,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.62,
+        "class": "bus"
+      },
+      {
+        "id": 4,
+        "center": [
+          -9.65,
+          16.8,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.64,
+        "class": "trailer"
+      },
+      {
+        "id": 5,
+        "center": [
+          -12.23,
+          18.5,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.56,
+        "class": "barrier"
+      },
+      {
+        "id": 6,
+        "center": [
+          -3.56,
+          20.2,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.58,
+        "class": "motorcycle"
+      },
+      {
+        "id": 7,
+        "center": [
+          8.38,
+          21.9,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.6,
+        "class": "bicycle"
+      },
+      {
+        "id": 8,
+        "center": [
+          12.61,
+          23.6,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.62,
+        "class": "pedestrian"
+      },
+      {
+        "id": 9,
+        "center": [
+          5.25,
+          25.3,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.64,
+        "class": "traffic_cone"
+      },
+      {
+        "id": 10,
+        "center": [
+          -6.94,
+          27.0,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.56,
+        "class": "car"
+      },
+      {
+        "id": 11,
+        "center": [
+          -12.75,
+          28.7,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.58,
+        "class": "truck"
+      },
+      {
+        "id": 12,
+        "center": [
+          -6.84,
+          30.4,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.6,
+        "class": "construction_vehicle"
+      },
+      {
+        "id": 13,
+        "center": [
+          5.36,
+          32.1,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.62,
+        "class": "bus"
+      },
+      {
+        "id": 14,
+        "center": [
+          12.63,
+          33.8,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.64,
+        "class": "trailer"
+      },
+      {
+        "id": 15,
+        "center": [
+          8.29,
+          35.5,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.56,
+        "class": "barrier"
+      },
+      {
+        "id": 16,
+        "center": [
+          -3.67,
+          37.2,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.58,
+        "class": "motorcycle"
+      },
+      {
+        "id": 17,
+        "center": [
+          -12.26,
+          38.9,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.6,
+        "class": "bicycle"
+      },
+      {
+        "id": 18,
+        "center": [
+          -9.58,
+          40.6,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.62,
+        "class": "pedestrian"
+      },
+      {
+        "id": 19,
+        "center": [
+          1.91,
+          42.3,
+          -0.42
+        ],
+        "size": [
+          1.7,
+          3.82,
+          1.6
+        ],
+        "yaw": 0.3,
+        "confidence": 0.64,
+        "class": "traffic_cone"
+      }
+    ],
+    "layer_4": [
+      {
+        "id": 0,
+        "center": [
+          0.0,
+          10.0,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.68,
+        "class": "car"
+      },
+      {
+        "id": 1,
+        "center": [
+          10.1,
+          11.6,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.7,
+        "class": "truck"
+      },
+      {
+        "id": 2,
+        "center": [
+          10.91,
+          13.2,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.72,
+        "class": "construction_vehicle"
+      },
+      {
+        "id": 3,
+        "center": [
+          1.69,
+          14.8,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.74,
+        "class": "bus"
+      },
+      {
+        "id": 4,
+        "center": [
+          -9.08,
+          16.4,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.76,
+        "class": "trailer"
+      },
+      {
+        "id": 5,
+        "center": [
+          -11.51,
+          18.0,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.68,
+        "class": "barrier"
+      },
+      {
+        "id": 6,
+        "center": [
+          -3.35,
+          19.6,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.7,
+        "class": "motorcycle"
+      },
+      {
+        "id": 7,
+        "center": [
+          7.88,
+          21.2,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.72,
+        "class": "bicycle"
+      },
+      {
+        "id": 8,
+        "center": [
+          11.87,
+          22.8,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.74,
+        "class": "pedestrian"
+      },
+      {
+        "id": 9,
+        "center": [
+          4.95,
+          24.4,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.76,
+        "class": "traffic_cone"
+      },
+      {
+        "id": 10,
+        "center": [
+          -6.53,
+          26.0,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.68,
+        "class": "car"
+      },
+      {
+        "id": 11,
+        "center": [
+          -12.0,
+          27.6,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.7,
+        "class": "truck"
+      },
+      {
+        "id": 12,
+        "center": [
+          -6.44,
+          29.2,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.72,
+        "class": "construction_vehicle"
+      },
+      {
+        "id": 13,
+        "center": [
+          5.04,
+          30.8,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.74,
+        "class": "bus"
+      },
+      {
+        "id": 14,
+        "center": [
+          11.89,
+          32.4,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.76,
+        "class": "trailer"
+      },
+      {
+        "id": 15,
+        "center": [
+          7.8,
+          34.0,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.68,
+        "class": "barrier"
+      },
+      {
+        "id": 16,
+        "center": [
+          -3.45,
+          35.6,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.7,
+        "class": "motorcycle"
+      },
+      {
+        "id": 17,
+        "center": [
+          -11.54,
+          37.2,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.72,
+        "class": "bicycle"
+      },
+      {
+        "id": 18,
+        "center": [
+          -9.01,
+          38.8,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.74,
+        "class": "pedestrian"
+      },
+      {
+        "id": 19,
+        "center": [
+          1.8,
+          40.4,
+          -0.4
+        ],
+        "size": [
+          1.6,
+          3.6,
+          1.6
+        ],
+        "yaw": 0.4,
+        "confidence": 0.76,
+        "class": "traffic_cone"
+      }
+    ],
+    "layer_5": [
+      {
+        "id": 0,
+        "center": [
+          0.0,
+          10.0,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.8,
+        "class": "car"
+      },
+      {
+        "id": 1,
+        "center": [
+          9.47,
+          11.5,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.82,
+        "class": "truck"
+      },
+      {
+        "id": 2,
+        "center": [
+          10.23,
+          13.0,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.84,
+        "class": "construction_vehicle"
+      },
+      {
+        "id": 3,
+        "center": [
+          1.59,
+          14.5,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.86,
+        "class": "bus"
+      },
+      {
+        "id": 4,
+        "center": [
+          -8.51,
+          16.0,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.88,
+        "class": "trailer"
+      },
+      {
+        "id": 5,
+        "center": [
+          -10.79,
+          17.5,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.8,
+        "class": "barrier"
+      },
+      {
+        "id": 6,
+        "center": [
+          -3.14,
+          19.0,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.82,
+        "class": "motorcycle"
+      },
+      {
+        "id": 7,
+        "center": [
+          7.39,
+          20.5,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.84,
+        "class": "bicycle"
+      },
+      {
+        "id": 8,
+        "center": [
+          11.13,
+          22.0,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.86,
+        "class": "pedestrian"
+      },
+      {
+        "id": 9,
+        "center": [
+          4.64,
+          23.5,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.88,
+        "class": "traffic_cone"
+      },
+      {
+        "id": 10,
+        "center": [
+          -6.12,
+          25.0,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.8,
+        "class": "car"
+      },
+      {
+        "id": 11,
+        "center": [
+          -11.25,
+          26.5,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.82,
+        "class": "truck"
+      },
+      {
+        "id": 12,
+        "center": [
+          -6.04,
+          28.0,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.84,
+        "class": "construction_vehicle"
+      },
+      {
+        "id": 13,
+        "center": [
+          4.73,
+          29.5,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.86,
+        "class": "bus"
+      },
+      {
+        "id": 14,
+        "center": [
+          11.14,
+          31.0,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.88,
+        "class": "trailer"
+      },
+      {
+        "id": 15,
+        "center": [
+          7.32,
+          32.5,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.8,
+        "class": "barrier"
+      },
+      {
+        "id": 16,
+        "center": [
+          -3.24,
+          34.0,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.82,
+        "class": "motorcycle"
+      },
+      {
+        "id": 17,
+        "center": [
+          -10.82,
+          35.5,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.84,
+        "class": "bicycle"
+      },
+      {
+        "id": 18,
+        "center": [
+          -8.45,
+          37.0,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.86,
+        "class": "pedestrian"
+      },
+      {
+        "id": 19,
+        "center": [
+          1.69,
+          38.5,
+          -0.38
+        ],
+        "size": [
+          1.5,
+          3.38,
+          1.6
+        ],
+        "yaw": 0.5,
+        "confidence": 0.88,
+        "class": "traffic_cone"
+      }
+    ],
+    "layer_6": [
+      {
+        "id": 0,
+        "center": [
+          0.0,
+          10.0,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.92,
+        "class": "car"
+      },
+      {
+        "id": 1,
+        "center": [
+          8.84,
+          11.4,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.94,
+        "class": "truck"
+      },
+      {
+        "id": 2,
+        "center": [
+          9.55,
+          12.8,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.96,
+        "class": "construction_vehicle"
+      },
+      {
+        "id": 3,
+        "center": [
+          1.48,
+          14.2,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.98,
+        "class": "bus"
+      },
+      {
+        "id": 4,
+        "center": [
+          -7.95,
+          15.6,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.98,
+        "class": "trailer"
+      },
+      {
+        "id": 5,
+        "center": [
+          -10.07,
+          17.0,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.92,
+        "class": "barrier"
+      },
+      {
+        "id": 6,
+        "center": [
+          -2.93,
+          18.4,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.94,
+        "class": "motorcycle"
+      },
+      {
+        "id": 7,
+        "center": [
+          6.9,
+          19.8,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.96,
+        "class": "bicycle"
+      },
+      {
+        "id": 8,
+        "center": [
+          10.39,
+          21.2,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.98,
+        "class": "pedestrian"
+      },
+      {
+        "id": 9,
+        "center": [
+          4.33,
+          22.6,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.98,
+        "class": "traffic_cone"
+      },
+      {
+        "id": 10,
+        "center": [
+          -5.71,
+          24.0,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.92,
+        "class": "car"
+      },
+      {
+        "id": 11,
+        "center": [
+          -10.5,
+          25.4,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.94,
+        "class": "truck"
+      },
+      {
+        "id": 12,
+        "center": [
+          -5.63,
+          26.8,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.96,
+        "class": "construction_vehicle"
+      },
+      {
+        "id": 13,
+        "center": [
+          4.41,
+          28.2,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.98,
+        "class": "bus"
+      },
+      {
+        "id": 14,
+        "center": [
+          10.4,
+          29.6,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.98,
+        "class": "trailer"
+      },
+      {
+        "id": 15,
+        "center": [
+          6.83,
+          31.0,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.92,
+        "class": "barrier"
+      },
+      {
+        "id": 16,
+        "center": [
+          -3.02,
+          32.4,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.94,
+        "class": "motorcycle"
+      },
+      {
+        "id": 17,
+        "center": [
+          -10.09,
+          33.8,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.96,
+        "class": "bicycle"
+      },
+      {
+        "id": 18,
+        "center": [
+          -7.89,
+          35.2,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.98,
+        "class": "pedestrian"
+      },
+      {
+        "id": 19,
+        "center": [
+          1.57,
+          36.6,
+          -0.35
+        ],
+        "size": [
+          1.4,
+          3.15,
+          1.6
+        ],
+        "yaw": 0.6,
+        "confidence": 0.98,
+        "class": "traffic_cone"
+      }
+    ]
+  }
+}

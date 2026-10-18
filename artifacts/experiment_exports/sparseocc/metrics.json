@@ -1,0 +1,13 @@
+{
+  "experiment_id": "EXP-004_sparseocc_real_e8",
+  "model": "SparseOcc-v1.1",
+  "epochs": 8,
+  "steps": 3232,
+  "initial_loss": 3.4929,
+  "final_loss": 0.0087,
+  "loss_reduction": 3.4842,
+  "total_time_sec": 1770.9,
+  "peak_allocated_vram_mb": 8458.24,
+  "checkpoint_path": "/public/lyh/projects/BEV/outputs/checkpoints/sparseocc_v11_real_best.pth",
+  "checkpoint_size_mb": 307.0
+}

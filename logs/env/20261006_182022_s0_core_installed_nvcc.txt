@@ -1,0 +1,1 @@
+scripts/snapshot_env.sh: line 67: nvcc: command not found

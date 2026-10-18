@@ -1,0 +1,92 @@
+# ==============================================================================
+# Git Ignore Configuration for Multi-Camera BEV & Occupancy Perception Project
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. External & Large Datasets (Never track heavy raw datasets)
+# ------------------------------------------------------------------------------
+data/*
+!data/README.md
+!data/.gitkeep
+data
+
+# ------------------------------------------------------------------------------
+# 2. Pretrained Model Weights & Large Checkpoints (> 100MB rejected by GitHub)
+# ------------------------------------------------------------------------------
+pretrained/*
+!pretrained/README.md
+!pretrained/.gitkeep
+pretrained
+
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.onnx
+*.engine
+*.tflite
+*.safetensors
+
+# ------------------------------------------------------------------------------
+# 3. Experiment Outputs & Local Run Payloads
+# ------------------------------------------------------------------------------
+outputs/*
+!outputs/README.md
+!outputs/.gitkeep
+
+# ------------------------------------------------------------------------------
+# 4. Cache, Logs & Download Temp Files
+# ------------------------------------------------------------------------------
+cache/*
+!cache/.gitkeep
+cache/
+logs/*.log
+*.log
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+
+# ------------------------------------------------------------------------------
+# 5. Compiled Binaries & Python Bytecode
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.a
+*.o
+*.lo
+*.dylib
+*.dll
+*.egg-info/
+*.egg
+build/
+dist/
+develop-eggs/
+eggs/
+parts/
+var/
+sdist/
+
+# ------------------------------------------------------------------------------
+# 6. Large Media Files (> 10MB; lightweight images/webp are intentionally tracked)
+# ------------------------------------------------------------------------------
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# ------------------------------------------------------------------------------
+# 7. IDE, OS & Tool Caches
+# ------------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+wandb/
+work_dirs/
+.ipynb_checkpoints/

@@ -1,0 +1,56 @@
+{
+  "our_model": {
+    "checkpoint": "/public/lyh/projects/BEV/outputs/checkpoints/sparseocc_v11_real_best.pth",
+    "miou_percent": 74.57,
+    "camera_masked_iou": {
+      "others": 73.85,
+      "barrier": 75.18,
+      "bicycle": 79.26,
+      "bus": null,
+      "car": 74.08,
+      "construction_vehicle": 73.39,
+      "motorcycle": 70.4,
+      "pedestrian": 75.25,
+      "traffic_cone": 73.97,
+      "trailer": null,
+      "truck": 73.57,
+      "driveable_surface": 75.11,
+      "other_flat": 74.28,
+      "sidewalk": 74.92,
+      "terrain": 75.33,
+      "manmade": 75.04,
+      "vegetation": 74.97,
+      "free": 93.73
+    },
+    "avg_latency_ms": 103.48,
+    "fps": 9.66,
+    "samples_evaluated": 15
+  },
+  "official": {
+    "checkpoint": "/public/lyh/pretrained_model/BEV/sparseocc/sparseocc_r50_nuimg_704x256_8f_24e_v1.1.pth",
+    "miou_percent": 74.83,
+    "camera_masked_iou": {
+      "others": 70.77,
+      "barrier": 75.14,
+      "bicycle": 76.3,
+      "bus": null,
+      "car": 74.88,
+      "construction_vehicle": 75.54,
+      "motorcycle": 77.62,
+      "pedestrian": 74.56,
+      "traffic_cone": 73.39,
+      "trailer": null,
+      "truck": 74.67,
+      "driveable_surface": 74.9,
+      "other_flat": 74.4,
+      "sidewalk": 74.85,
+      "terrain": 75.01,
+      "manmade": 75.41,
+      "vegetation": 75.09,
+      "free": 93.73
+    },
+    "avg_latency_ms": 93.21,
+    "fps": 10.73,
+    "samples_evaluated": 15
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "BEVDet-R50": {
+    "path": "/public/lyh/pretrained_model/BEV/bevdet/bevdet-r50-cbgs.pth",
+    "disk_size_mb": 169.2,
+    "top_level_keys": [
+      "epoch",
+      "state_dict",
+      "updates"
+    ],
+    "contains_optimizer": false,
+    "contains_meta": false,
+    "num_state_dict_tensors": 478,
+    "total_params_million": 44.31
+  },
+  "BEVDepth-R50": {
+    "path": "/public/lyh/pretrained_model/BEV/bevdet/bevdet-r50-4d-depth-cbgs.pth",
+    "disk_size_mb": 286.22,
+    "top_level_keys": [
+      "epoch",
+      "state_dict",
+      "updates"
+    ],
+    "contains_optimizer": false,
+    "contains_meta": false,
+    "num_state_dict_tensors": 606,
+    "total_params_million": 74.98
+  },
+  "BEVDet4D-R50": {
+    "path": "/public/lyh/pretrained_model/BEV/bevdet/bevdet-r50-4d-cbgs.pth",
+    "disk_size_mb": 200.61,
+    "top_level_keys": [
+      "epoch",
+      "state_dict",
+      "updates"
+    ],
+    "contains_optimizer": false,
+    "contains_meta": false,
+    "num_state_dict_tensors": 504,
+    "total_params_million": 52.54
+  },
+  "BEVFormer-Small": {
+    "path": "/public/lyh/pretrained_model/BEV/bevformer/bevformer_small_epoch_24.pth",
+    "disk_size_mb": 679.1,
+    "top_level_keys": [
+      "meta",
+      "state_dict",
+      "optimizer"
+    ],
+    "contains_optimizer": true,
+    "contains_meta": true,
+    "num_state_dict_tensors": 1001,
+    "total_params_million": 59.57
+  },
+  "Sparse4Dv3-R50": {
+    "path": "/public/lyh/pretrained_model/BEV/sparse4d/sparse4dv3_r50.pth",
+    "disk_size_mb": 550.43,
+    "top_level_keys": [
+      "meta",
+      "state_dict",
+      "optimizer"
+    ],
+    "contains_optimizer": true,
+    "contains_meta": true,
+    "num_state_dict_tensors": 819,
+    "total_params_million": 48.21
+  },
+  "BEVDet-Occ": {
+    "path": "/public/lyh/pretrained_model/BEV/bevdet/bevdet-occ-r50-4d-stereo_384704-24e.pth",
+    "disk_size_mb": 133.84,
+    "top_level_keys": [
+      "epoch",
+      "state_dict",
+      "updates"
+    ],
+    "contains_optimizer": false,
+    "contains_meta": false,
+    "num_state_dict_tensors": 576,
+    "total_params_million": 35.03
+  },
+  "SparseOcc-v1.1": {
+    "path": "/public/lyh/pretrained_model/BEV/sparseocc/sparseocc_r50_nuimg_704x256_8f_24e_v1.1.pth",
+    "disk_size_mb": 306.88,
+    "top_level_keys": [
+      "state_dict"
+    ],
+    "contains_optimizer": false,
+    "contains_meta": false,
+    "num_state_dict_tensors": 462,
+    "total_params_million": 80.4
+  }
+}

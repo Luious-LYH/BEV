@@ -1,0 +1,132 @@
+{
+  "model": "Sparse4Dv3-R50",
+  "checkpoint": "/public/lyh/pretrained_model/BEV/sparse4d/sparse4dv3_r50.pth",
+  "label": "official",
+  "num_samples_evaluated": 20,
+  "avg_latency_ms": 53.34,
+  "fps": 18.75,
+  "total_detections": 0,
+  "avg_detections_per_frame": 0.0,
+  "predictions": [
+    {
+      "sample_token": "ca9a282c9e77460f8360f564131a8af5",
+      "latency_ms": 51.16,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "39586f9d59004284a7114a68825e8eec",
+      "latency_ms": 53.09,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "356d81f38dd9473ba590f39e266f54e5",
+      "latency_ms": 53.05,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "e0845f5322254dafadbbed75aaa07969",
+      "latency_ms": 53.21,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "c923fe08b2ff4e27975d2bf30934383b",
+      "latency_ms": 53.02,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "f1e3d9d08f044c439ce86a2d6fcca57b",
+      "latency_ms": 53.55,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "4f545737bf3347fbbc9af60b0be9a963",
+      "latency_ms": 60.01,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "7626dde27d604ac28a0240bdd54eba7a",
+      "latency_ms": 52.96,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "be99ffc878b24aca8956bbb4e0f97d0c",
+      "latency_ms": 55.15,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "9813c23a5f1448b09bb7910fea9baf20",
+      "latency_ms": 52.91,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "023c4df2d451409881d8e6ea82f14704",
+      "latency_ms": 52.76,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "c235638ed66145988d17f9d0601923f2",
+      "latency_ms": 53.2,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "bc3c8a953f6b4dcdb77b521d89f3d9d5",
+      "latency_ms": 52.71,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "1e3d79dae62742a0ad64c91679863358",
+      "latency_ms": 52.69,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "2afb9d32310e4546a71cbe432911eca2",
+      "latency_ms": 52.89,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "cd21dbfc3bd749c7b10a5c42562e0c42",
+      "latency_ms": 52.78,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "88449a5cb1644a199c1c11f6ac034867",
+      "latency_ms": 52.97,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "2ff86dc19c4644a1a88ce5ba848f56e5",
+      "latency_ms": 53.01,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "bf2938e43c6f487497cda76b51bfc406",
+      "latency_ms": 52.79,
+      "num_boxes": 0,
+      "boxes": []
+    },
+    {
+      "sample_token": "b26e791522294bec90f86fd72226e35c",
+      "latency_ms": 52.99,
+      "num_boxes": 0,
+      "boxes": []
+    }
+  ]
+}

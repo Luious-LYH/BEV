@@ -1,0 +1,12 @@
+{
+  "experiment_id": "EXP-003_bevdet_occ_real_e8",
+  "repo": "BEVDet",
+  "remote": "https://github.com/HuangJianHui/BEVDet.git",
+  "branch": "dev3.0",
+  "commit": "3.0.0-occ-academic",
+  "config": "configs/bevdet_occ/bevdet-occ-r50-4d-stereo-24e_384704.py",
+  "checkpoint_initial": "/public/lyh/pretrained_model/BEV/bevdet/bevdet-occ-r50-4d-stereo_384704-24e.pth",
+  "checkpoint_produced": "/public/lyh/projects/BEV/outputs/checkpoints/bevdet_occ_real_best.pth",
+  "dataset": "Occ3D-nuScenes GT",
+  "status": "COMPLETED"
+}

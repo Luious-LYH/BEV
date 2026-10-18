@@ -1,0 +1,1 @@
+drwxrwxrwx 18 nobody nogroup 4096 May 21  2023 /usr/local/cuda-12.0

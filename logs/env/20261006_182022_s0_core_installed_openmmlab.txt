@@ -1,0 +1,6 @@
+numpy IMPORT_FAILED ModuleNotFoundError("No module named 'numpy'")
+mmcv IMPORT_FAILED ModuleNotFoundError("No module named 'mmcv'")
+mmengine IMPORT_FAILED ModuleNotFoundError("No module named 'mmengine'")
+mmdet IMPORT_FAILED ModuleNotFoundError("No module named 'mmdet'")
+mmseg IMPORT_FAILED ModuleNotFoundError("No module named 'mmseg'")
+mmdet3d IMPORT_FAILED ModuleNotFoundError("No module named 'mmdet3d'")

@@ -1,0 +1,6 @@
+CONDA_DEFAULT_ENV=ubench
+CONDA_PREFIX=/public/lyh/.conda/envs/ubench
+CUDA_VISIBLE_DEVICES=
+CUDA_HOME=
+PATH=/opt/miniconda3/bin:/opt/miniconda3/bin:/home/lyh/graftcp:/home/lyh/graftcp:/home/lyh/.antigravity-ide-server/bin/2.5.5-ecfbad74d93962fc8ca485d93ab9b4f3d4cb6cf8/bin/remote-cli:/home/lyh/.local/bin:/public/lyh/.conda/envs/ubench/bin:/home/lyh/graftcp:/opt/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LD_LIBRARY_PATH=

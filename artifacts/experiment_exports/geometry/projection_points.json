@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "dataset": "nuScenes v1.0-mini",
+    "scene": "scene-0061",
+    "sample_token": "ca9a282c9e77460f8360f564131a8af5",
+    "camera_channel": "CAM_FRONT",
+    "calibration": {
+      "t_lidar2ego": [
+        0.943713,
+        0.0,
+        1.84023
+      ],
+      "t_cam2ego": [
+        1.70079118954,
+        0.0159456324149,
+        1.51095763913
+      ],
+      "fx": 1266.417203046554,
+      "fy": 1266.417203046554,
+      "cx": 816.2670197447984,
+      "cy": 491.50706579294757
+    },
+    "tag": "REAL DATA"
+  },
+  "points": [
+    {
+      "id": "point_center",
+      "name": "\u6d4b\u8bd5\u70b9 1\uff1a\u89c6\u91ce\u6b63\u4e2d\u592e\u6709\u6548\u524d\u666f\u76ee\u6807 (\u524d\u8f66\u4fdd\u9669\u6760)",
+      "description": "\u4f4d\u4e8e\u81ea\u8f66\u6b63\u524d\u65b9\u7ea6 14.5 \u7c73\uff0c\u5b8c\u7f8e\u843d\u5165\u524d\u89c6\u76f8\u673a\u4e2d\u592e\u753b\u9762\uff0c\u6b63\u5e38\u6295\u5f71\u3002",
+      "step1_lidar": [
+        -0.4525,
+        25.3789,
+        -1.1835
+      ],
+      "step2_ego": [
+        26.2855,
+        0.5146,
+        0.0448
+      ],
+      "step3_camera": [
+        -0.3601,
+        1.3271,
+        24.595
+      ],
+      "step4_pixel": [
+        797.7,
+        559.8
+      ],
+      "is_visible": true,
+      "z_cam_positive": true,
+      "status_text": "\u6295\u5f71\u6709\u6548\uff01\u843d\u5165\u524d\u89c6\u76f8\u673a\u89c6\u91ce\u8303\u56f4\u5185"
+    },
+    {
+      "id": "point_edge",
+      "name": "\u6d4b\u8bd5\u70b9 2\uff1a\u56fe\u50cf\u53f3\u8fb9\u7f18\u8fd1\u754c\u70b9 (\u53f3\u4fa7\u8def\u7f18/\u4e34\u8f66\u8fb9\u7f18)",
+      "description": "\u4f4d\u4e8e\u53f3\u4fa7\u4ea4\u754c\u89c6\u9525\u8fb9\u7f18\uff0c\u867d\u7136\u4e09\u7ef4\u4f4d\u7f6e\u5728\u524d\u65b9\uff0c\u4f46\u63a5\u8fd1\u50cf\u7d20\u6781\u9650\u8fb9\u754c\u3002",
+      "step1_lidar": [
+        -13.0592,
+        20.7315,
+        4.0904
+      ],
+      "step2_ego": [
+        21.7416,
+        13.0802,
+        5.5041
+      ],
+      "step3_camera": [
+        -12.9469,
+        -4.117,
+        20.0919
+      ],
+      "step4_pixel": [
+        0.2,
+        232.0
+      ],
+      "is_visible": true,
+      "z_cam_positive": true,
+      "status_text": "\u6295\u5f71\u6709\u6548\uff01\u843d\u5165\u524d\u89c6\u76f8\u673a\u89c6\u91ce\u8303\u56f4\u5185"
+    },
+    {
+      "id": "point_rear",
+      "name": "\u6d4b\u8bd5\u70b9 3\uff1a\u8f66\u8eab\u540e\u65b9\u4e0d\u53ef\u89c1\u70b9 (\u76f8\u673a\u80cc\u540e\u88c1\u526a)",
+      "description": "\u4f4d\u4e8e\u81ea\u8f66\u540e\u8f74\u540e\u65b9\uff0cZ_cam < 0 \u5904\u4e8e\u76f8\u673a\u5149\u5b66\u5e73\u9762\u7684\u80cc\u9762\uff0c\u5fc5\u987b\u5728\u6295\u5f71\u9636\u6bb5\u5254\u9664\u3002",
+      "step1_lidar": [
+        -3.1244,
+        -0.4342,
+        -1.8672
+      ],
+      "step2_ego": [
+        0.4581,
+        3.1343,
+        0.0026
+      ],
+      "step3_camera": [
+        -3.1266,
+        1.5128,
+        -1.2165
+      ],
+      "step4_pixel": null,
+      "is_visible": false,
+      "z_cam_positive": false,
+      "status_text": "\u4e0d\u53ef\u89c1\uff1a\u4f4d\u4e8e\u76f8\u673a\u540e\u65b9 (Z_cam < 0)"
+    }
+  ]
+}

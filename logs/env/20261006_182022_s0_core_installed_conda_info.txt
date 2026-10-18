@@ -1,0 +1,32 @@
+
+     active environment : ubench
+    active env location : /public/lyh/.conda/envs/ubench
+            shell level : 1
+       user config file : /home/lyh/.condarc
+ populated config files : /home/lyh/.condarc
+          conda version : 23.10.0
+    conda-build version : not installed
+         python version : 3.11.5.final.0
+       virtual packages : __archspec=1=zen2
+                          __cuda=12.2=0
+                          __glibc=2.35=0
+                          __linux=5.19.0=0
+                          __unix=0=0
+       base environment : /opt/miniconda3  (read only)
+      conda av data dir : /opt/miniconda3/etc/conda
+  conda av metadata url : None
+           channel URLs : https://repo.anaconda.com/pkgs/main/linux-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/r/linux-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+          package cache : /public/lyh/.conda/pkgs
+       envs directories : /public/lyh/.conda/envs
+                          /home/lyh/.conda/envs
+                          /opt/miniconda3/envs
+               platform : linux-64
+             user-agent : conda/23.10.0 requests/2.31.0 CPython/3.11.5 Linux/5.19.0-42-generic ubuntu/22.04.3 glibc/2.35 solver/libmamba conda-libmamba-solver/23.11.1 libmambapy/1.5.3
+                UID:GID : 1001:1001
+             netrc file : None
+           offline mode : False
+
+

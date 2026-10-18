@@ -1,0 +1,15 @@
+{
+  "experiment_id": "EXP-002_sparse4d_real_e12",
+  "model": "Sparse4Dv3-R50",
+  "epochs": 12,
+  "steps": 3396,
+  "initial_loss": 28.3147,
+  "final_loss": 19.8813,
+  "loss_reduction": 8.4334,
+  "loss_reduction_pct": 29.78,
+  "total_time_sec": 1235.4,
+  "avg_step_time_sec": 0.3638,
+  "peak_allocated_vram_mb": 5847.04,
+  "checkpoint_path": "/public/lyh/projects/BEV/outputs/checkpoints/sparse4dv3_r50_real_best.pth",
+  "checkpoint_size_mb": 185.0
+}

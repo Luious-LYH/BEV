@@ -1,0 +1,122 @@
+{
+  "dataset": "Occ3D-nuScenes",
+  "version": "v1.0-official",
+  "total_scenes_available": 852,
+  "total_frames_extracted": 34149,
+  "voxel_volume_size": [
+    200,
+    200,
+    16
+  ],
+  "total_voxels_per_frame": 640000,
+  "spatial_range_xyz": [
+    -40.0,
+    -40.0,
+    -1.0,
+    40.0,
+    40.0,
+    5.4
+  ],
+  "voxel_resolution_xyz": [
+    0.4,
+    0.4,
+    0.4
+  ],
+  "num_classes": 18,
+  "class_names": [
+    "others",
+    "barrier",
+    "bicycle",
+    "bus",
+    "car",
+    "construction_vehicle",
+    "motorcycle",
+    "pedestrian",
+    "traffic_cone",
+    "trailer",
+    "truck",
+    "driveable_surface",
+    "other_flat",
+    "sidewalk",
+    "terrain",
+    "manmade",
+    "vegetation",
+    "free"
+  ],
+  "sample_frame_audited": {
+    "path": "/public/lyh/data/BEV_dataset/nuscenes/occ3d/gts/scene-0061/ca9a282c9e77460f8360f564131a8af5/labels.npz",
+    "free_voxels_class_17": 615023,
+    "free_percentage": 96.1,
+    "occupied_voxels": 24977,
+    "occupied_percentage": 3.9,
+    "camera_visible_voxels": 67761,
+    "lidar_observed_voxels": 73629
+  },
+  "class_distribution": {
+    "others": {
+      "class_id": 0,
+      "voxel_count": 7,
+      "percentage": 0.001
+    },
+    "barrier": {
+      "class_id": 1,
+      "voxel_count": 510,
+      "percentage": 0.08
+    },
+    "car": {
+      "class_id": 4,
+      "voxel_count": 560,
+      "percentage": 0.088
+    },
+    "pedestrian": {
+      "class_id": 7,
+      "voxel_count": 313,
+      "percentage": 0.049
+    },
+    "traffic_cone": {
+      "class_id": 8,
+      "voxel_count": 15,
+      "percentage": 0.002
+    },
+    "truck": {
+      "class_id": 10,
+      "voxel_count": 1019,
+      "percentage": 0.159
+    },
+    "driveable_surface": {
+      "class_id": 11,
+      "voxel_count": 4875,
+      "percentage": 0.762
+    },
+    "other_flat": {
+      "class_id": 12,
+      "voxel_count": 169,
+      "percentage": 0.026
+    },
+    "sidewalk": {
+      "class_id": 13,
+      "voxel_count": 1082,
+      "percentage": 0.169
+    },
+    "terrain": {
+      "class_id": 14,
+      "voxel_count": 2432,
+      "percentage": 0.38
+    },
+    "manmade": {
+      "class_id": 15,
+      "voxel_count": 5238,
+      "percentage": 0.818
+    },
+    "vegetation": {
+      "class_id": 16,
+      "voxel_count": 8757,
+      "percentage": 1.368
+    },
+    "free": {
+      "class_id": 17,
+      "voxel_count": 615023,
+      "percentage": 96.097
+    }
+  }
+}

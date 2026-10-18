@@ -1,0 +1,25 @@
+{
+  "grid_shape": [
+    150,
+    150,
+    256
+  ],
+  "bev_resolution": [
+    0.68,
+    0.68
+  ],
+  "pc_range": [
+    -51.2,
+    -51.2,
+    -5.0,
+    51.2,
+    51.2,
+    3.0
+  ],
+  "feature_mean": 0.042,
+  "feature_std": 0.285,
+  "feature_min": -2.14,
+  "feature_max": 5.82,
+  "sparsity_pct": 18.4,
+  "num_queries": 22500
+}

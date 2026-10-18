@@ -1,0 +1,99 @@
+/* ==============================================================================
+ * BEV / OCC Perception Interactive Textbook - Visual Design System Tokens
+ * ============================================================================== */
+
+:root {
+  --bg-primary: #07090E;
+  --bg-secondary: #0D111A;
+  --bg-surface: #131926;
+  --bg-card: rgba(19, 25, 38, 0.85);
+  --bg-card-hover: rgba(26, 36, 56, 0.95);
+  --bg-modal: rgba(10, 14, 22, 0.95);
+  
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.16);
+  --border-cyan: rgba(0, 229, 255, 0.35);
+  --border-glow: 0 0 20px rgba(0, 229, 255, 0.2);
+  
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-link: #38BDF8;
+  
+  /* Primary Cyber Accents */
+  --accent-cyan: #00E5FF;
+  --accent-blue: #3B82F6;
+  --accent-purple: #D500F9;
+  --accent-green: #00E676;
+  --accent-amber: #FFAB00;
+  --accent-rose: #F43F5E;
+  
+  /* Mandatory Four Badges */
+  --badge-real-data-bg: rgba(0, 230, 118, 0.15);
+  --badge-real-data-text: #00E676;
+  --badge-real-data-border: #00E676;
+  
+  --badge-real-model-bg: rgba(0, 229, 255, 0.15);
+  --badge-real-model-text: #00E5FF;
+  --badge-real-model-border: #00E5FF;
+  
+  --badge-our-train-bg: rgba(213, 0, 249, 0.15);
+  --badge-our-train-text: #E040FB;
+  --badge-our-train-border: #D500F9;
+  
+  --badge-schematic-bg: rgba(255, 171, 0, 0.15);
+  --badge-schematic-text: #FFAB00;
+  --badge-schematic-border: #FFAB00;
+  
+  /* Component Dimensions */
+  --header-height: 60px;
+  --sidebar-width: 290px;
+  --bottom-bar-height: 64px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+code, pre, .mono {
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 229, 255, 0.4);
+}

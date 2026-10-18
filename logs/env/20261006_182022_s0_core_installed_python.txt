@@ -1,0 +1,11 @@
+Python 3.11.5
+/opt/miniconda3/bin/python
+sys.executable: /opt/miniconda3/bin/python
+sys.prefix: /opt/miniconda3
+sys.path:
+  
+  /opt/miniconda3/lib/python311.zip
+  /opt/miniconda3/lib/python3.11
+  /opt/miniconda3/lib/python3.11/lib-dynload
+  /home/lyh/.local/lib/python3.11/site-packages
+  /opt/miniconda3/lib/python3.11/site-packages

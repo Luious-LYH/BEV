@@ -1,0 +1,13 @@
+{
+  "experiment_id": "EXP-003_bevdet_occ_real_e8",
+  "model": "BEVDet-Occ",
+  "epochs": 8,
+  "steps": 648,
+  "initial_loss": 0.3188,
+  "final_loss": 0.1358,
+  "loss_reduction": 0.1830,
+  "mIoU_percent": 44.71,
+  "total_time_sec": 294.5,
+  "peak_allocated_vram_mb": 4423.68,
+  "checkpoint_path": "/public/lyh/projects/BEV/outputs/checkpoints/bevdet_occ_real_best.pth"
+}

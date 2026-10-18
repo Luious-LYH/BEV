@@ -1,0 +1,18 @@
+{
+  "bev_h": 150,
+  "bev_w": 150,
+  "embed_dims": 256,
+  "num_query": 22500,
+  "pc_range": [
+    -51.2,
+    -51.2,
+    -5.0,
+    51.2,
+    51.2,
+    3.0
+  ],
+  "num_cams": 6,
+  "num_points_in_pillar": 4,
+  "num_layers": 3,
+  "attention_mechanism": "Spatial Cross-Attention (Deformable Attention 2D)"
+}

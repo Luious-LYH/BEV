@@ -1,0 +1,58 @@
+diff --git a/mmdet3d/__init__.py b/mmdet3d/__init__.py
+index 643c39c..7455d25 100644
+--- a/mmdet3d/__init__.py
++++ b/mmdet3d/__init__.py
+@@ -19,7 +19,7 @@ def digit_version(version_str):
+ 
+ 
+ mmcv_minimum_version = '1.5.2'
+-mmcv_maximum_version = '1.7.0'
++mmcv_maximum_version = '1.8.0'
+ mmcv_version = digit_version(mmcv.__version__)
+ 
+ 
+diff --git a/mmdet3d/core/bbox/assigners/hungarian_assigner_3d.py b/mmdet3d/core/bbox/assigners/hungarian_assigner_3d.py
+index 6df57fc..0a9918e 100644
+--- a/mmdet3d/core/bbox/assigners/hungarian_assigner_3d.py
++++ b/mmdet3d/core/bbox/assigners/hungarian_assigner_3d.py
+@@ -78,7 +78,7 @@ class HeuristicAssigner3D(BaseAssigner):
+         )
+ 
+ 
+-@BBOX_ASSIGNERS.register_module()
++@BBOX_ASSIGNERS.register_module(force=True)
+ class HungarianAssigner3D(BaseAssigner):
+     def __init__(self,
+                  cls_cost=dict(type='ClassificationCost', weight=1.),
+diff --git a/mmdet3d/core/evaluation/__init__.py b/mmdet3d/core/evaluation/__init__.py
+index b1d489f..2cb796b 100644
+--- a/mmdet3d/core/evaluation/__init__.py
++++ b/mmdet3d/core/evaluation/__init__.py
+@@ -2,7 +2,10 @@
+ from .indoor_eval import indoor_eval
+ from .instance_seg_eval import instance_seg_eval
+ from .kitti_utils import kitti_eval, kitti_eval_coco_style
+-from .lyft_eval import lyft_eval
++try:
++    from .lyft_eval import lyft_eval
++except ImportError:
++    lyft_eval = None
+ from .seg_eval import seg_eval
+ 
+ __all__ = [
+diff --git a/mmdet3d/datasets/__init__.py b/mmdet3d/datasets/__init__.py
+index 5f71b76..6342296 100644
+--- a/mmdet3d/datasets/__init__.py
++++ b/mmdet3d/datasets/__init__.py
+@@ -5,7 +5,10 @@ from .custom_3d import Custom3DDataset
+ from .custom_3d_seg import Custom3DSegDataset
+ from .kitti_dataset import KittiDataset
+ from .kitti_mono_dataset import KittiMonoDataset
+-from .lyft_dataset import LyftDataset
++try:
++    from .lyft_dataset import LyftDataset
++except ImportError:
++    LyftDataset = None
+ from .nuscenes_dataset import NuScenesDataset
+ from .nuscenes_mono_dataset import NuScenesMonoDataset
+ from .nuscenes_dataset_occ import NuScenesDatasetOccpancy

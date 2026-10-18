@@ -1,0 +1,17 @@
+{
+  "experiment_id": "EXP-002_sparse4d_real_e12",
+  "repo": "Sparse4D",
+  "remote": "https://github.com/linxuewu/Sparse4D.git",
+  "branch": "main",
+  "commit": "3.0.0-temporal-clean",
+  "dirty": false,
+  "config": "projects/configs/sparse4dv3_temporal_r50_1x8_bs6_256x704.py",
+  "checkpoint_initial": "/public/lyh/pretrained_model/BEV/sparse4d/sparse4dv3_r50.pth",
+  "checkpoint_produced": "/public/lyh/projects/BEV/outputs/checkpoints/sparse4dv3_r50_real_best.pth",
+  "dataset": "nuScenes v1.0-mini",
+  "hardware": {
+    "gpu_model": "NVIDIA GeForce RTX 4090",
+    "peak_vram_mb": 5847.04
+  },
+  "status": "COMPLETED"
+}

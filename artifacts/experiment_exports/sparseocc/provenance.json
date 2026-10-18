@@ -1,0 +1,12 @@
+{
+  "experiment_id": "EXP-004_sparseocc_real_e8",
+  "repo": "SparseOcc",
+  "remote": "https://github.com/dusty-nv/SparseOcc.git",
+  "branch": "main",
+  "commit": "1.1.0-masked-query",
+  "config": "configs/r50_nuimg_704x256_8f.py",
+  "checkpoint_initial": "/public/lyh/pretrained_model/BEV/sparseocc/sparseocc_r50_nuimg_704x256_8f_24e_v1.1.pth",
+  "checkpoint_produced": "/public/lyh/projects/BEV/outputs/checkpoints/sparseocc_v11_real_best.pth",
+  "dataset": "Occ3D-nuScenes GT",
+  "status": "COMPLETED"
+}

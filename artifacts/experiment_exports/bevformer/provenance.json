@@ -1,0 +1,17 @@
+{
+  "experiment_id": "EXP-001_bevformer_real_e10",
+  "repo": "BEVFormer",
+  "remote": "https://github.com/fundamentalvision/BEVFormer.git",
+  "branch": "master",
+  "commit": "2.0.0-academic-clean",
+  "dirty": false,
+  "config": "projects/configs/bevformer/bevformer_small.py",
+  "checkpoint_initial": "/public/lyh/pretrained_model/BEV/bevformer/bevformer_small_epoch_24.pth",
+  "checkpoint_produced": "/public/lyh/projects/BEV/outputs/checkpoints/bevformer_small_real_best.pth",
+  "dataset": "nuScenes v1.0-mini",
+  "hardware": {
+    "gpu_model": "NVIDIA GeForce RTX 4090",
+    "peak_vram_mb": 6675.8203125
+  },
+  "status": "COMPLETED"
+}

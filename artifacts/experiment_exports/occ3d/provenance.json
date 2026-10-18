@@ -1,0 +1,9 @@
+{
+  "dataset": "Occ3D-nuScenes Ground Truth",
+  "source": "Tsinghua-MARS-Lab/Occ3D",
+  "sha256_verified": true,
+  "local_path": "/public/lyh/data/BEV_dataset/nuscenes/occ3d/",
+  "total_scenes": 852,
+  "total_frames": 34149,
+  "status": "VERIFIED_AND_EXTRACTED"
+}

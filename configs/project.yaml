@@ -1,0 +1,159 @@
+project:
+  name: "Multi-Camera BEV & Occupancy 3D Perception"
+  root: "/public/lyh/projects/BEV"
+  goal: "一周内真正理解并掌握现代自动驾驶 BEV / Sparse / Occupancy 感知主线，并包装为高质量教学与面试复习系统"
+  type: "teaching_first_reproduction"
+  priority_rule: "理解 > 可视化 > 跑通 > 小规模真实训练 > 对比 > 工程指标 > 论文数字复现"
+
+hardware:
+  gpus: [4, 5, 6, 7]
+  driver_version: "535.146.02"
+  driver_cuda_max: "12.2"
+  gpu_arch: "Ada Lovelace (RTX 4090 24GB x4)"
+
+environment:
+  target_conda_env: "bev"
+  python: "3.8.20"
+  pytorch: "2.0.1"
+  torchvision: "0.15.2"
+  torchaudio: "2.0.2"
+  pytorch_cuda: "11.8"
+  numpy_target: "1.23.5"
+  cuda_home: "/usr/local/cuda-11.8"
+  mmcv_full: "1.6.0"
+  mmdet: "2.28.2"
+  mmsegmentation: "0.30.0"
+
+data:
+  root: "/public/lyh/data/BEV_dataset/nuscenes"
+  occ3d_root: "/public/lyh/data/BEV_dataset/nuscenes/occ3d"
+  strategy: "incremental_on_demand"
+  max_single_download_gb: 20
+  base_foundation_target_gb: "80-100GB"
+  
+  tiers:
+    P0_immediate:
+      description: "教学启动与基础几何验证底座 (立刻下载解压，立即可跑)"
+      items:
+        - name: "v1.0-mini.tgz"
+          size_gb: 4.0
+          extract_path: "/public/lyh/data/BEV_dataset/nuscenes/"
+          required_by: "S0.7, S1.1-S1.3"
+          status: "PENDING"
+        - name: "v1.0-trainval_meta.tgz"
+          size_gb: 1.4
+          extract_path: "/public/lyh/data/BEV_dataset/nuscenes/v1.0-trainval/"
+          required_by: "S0.8, S1.4"
+          status: "PENDING"
+        - name: "nuScenes-map-expansion-v1.3.zip"
+          size_gb: 0.5
+          extract_path: "/public/lyh/data/BEV_dataset/nuscenes/maps/expansion/"
+          required_by: "S1.1"
+          status: "PENDING"
+        - name: "can_bus.zip"
+          size_gb: 0.04
+          extract_path: "/public/lyh/data/BEV_dataset/nuscenes/can_bus/"
+          required_by: "BEVFormer, Sparse4D"
+          status: "PENDING"
+
+    P1_background_keyframes:
+      description: "完整 nuScenes trainval 关键帧图库 (~52GB 下载，解压后约 55-60GB)"
+      archives:
+        - { name: "v1.0-trainval01_keyframes.tgz", size_gb: 5.2, extract_path: "samples/", status: "PENDING" }
+        - { name: "v1.0-trainval02_keyframes.tgz", size_gb: 5.2, extract_path: "samples/", status: "PENDING" }
+        - { name: "v1.0-trainval03_keyframes.tgz", size_gb: 5.2, extract_path: "samples/", status: "PENDING" }
+        - { name: "v1.0-trainval04_keyframes.tgz", size_gb: 5.2, extract_path: "samples/", status: "PENDING" }
+        - { name: "v1.0-trainval05_keyframes.tgz", size_gb: 5.2, extract_path: "samples/", status: "PENDING" }
+        - { name: "v1.0-trainval06_keyframes.tgz", size_gb: 5.2, extract_path: "samples/", status: "PENDING" }
+        - { name: "v1.0-trainval07_keyframes.tgz", size_gb: 5.2, extract_path: "samples/", status: "PENDING" }
+        - { name: "v1.0-trainval08_keyframes.tgz", size_gb: 5.2, extract_path: "samples/", status: "PENDING" }
+        - { name: "v1.0-trainval09_keyframes.tgz", size_gb: 5.2, extract_path: "samples/", status: "PENDING" }
+        - { name: "v1.0-trainval10_keyframes.tgz", size_gb: 5.2, extract_path: "samples/", status: "PENDING" }
+      trigger: "S0.8 后台启动，在 mini 跑通后逐步就绪"
+
+    P2_background_occ3d:
+      description: "Occ3D-nuScenes 真实占据网格体素真值 (~15GB 压缩包，解压后约 35-40GB)"
+      archives:
+        - { name: "Occ3D-nuScenes.zip (或 gts.tar.gz)", size_gb: 15.0, extract_path: "occ3d/gts/", status: "PENDING" }
+      trigger: "S0.8 后台启动，在 S2.9 之前就绪"
+
+    P3_on_demand_sweeps:
+      description: "中间时序相机帧 (仅当 BEVStereo 或 SparseOcc 8-frame 显式需要时触发)"
+      condition: "按需选择性下载，绝不默认下载全量 293GB multimodal sweeps"
+      status: "NOT_NEEDED_YET"
+
+    P4_excluded:
+      description: "明确排除下载"
+      items:
+        - "全量 ~293GB multimodal blobs"
+        - "全量 LiDAR sweeps"
+        - "全量 Radar sweeps"
+        - "nuScenes test split"
+        - "nuScenes lidarseg / panoptic"
+        - "重复的 Occ3D camera images"
+
+models:
+  tier1_formal_training:
+    # 6 个核心模型，必须做 checkpoint inference + 小 subset train/eval + 关键中间结果与教学可视化
+    - name: "BEVDet"
+      repo: "BEVDet"
+      branch: "dev3.0"
+      config: "configs/bevdet/bevdet-r50.py"
+      role: "Camera->BEV 几何投影 baseline"
+      training: true
+    - name: "BEVDepth"
+      repo: "BEVDet"
+      branch: "dev3.0"
+      config: "configs/bevdepth/bevdepth-r50.py"
+      role: "Stage 1 核心主模型：LiDAR depth supervision + Lift-Splat"
+      training: true
+    - name: "BEVFormer V1-small"
+      repo: "BEVFormer"
+      config: "projects/configs/bevformer/bevformer_small.py"
+      role: "Stage 2 核心主模型：BEV Query + Deformable Attention"
+      training: true
+    - name: "Sparse4Dv3-R50"
+      repo: "Sparse4D"
+      config: "projects/configs/sparse4dv3_r50.py"
+      role: "Stage 2 核心主模型：Object-centric Sparse Instance"
+      training: true
+    - name: "BEVDet-Occ R50"
+      repo: "BEVDet"
+      branch: "dev3.0"
+      config: "configs/bevdet_occ/bevdet-occ-r50-4d.py (轻量合理 R50)"
+      role: "Dense Occupancy 教学 baseline"
+      training: true
+    - name: "SparseOcc v1.1 R50"
+      repo: "SparseOcc"
+      version: "v1.1"
+      config: "projects/configs/sparseocc_r50.py"
+      role: "Stage 2 核心主模型：Sparse Occupancy Representation"
+      training: true
+
+  tier2_lightweight_teaching:
+    # 4 个轻量教学扩展模型，不要求正式训练，仅做架构阅读 / light inference / 可视化对比
+    - name: "BEVDet4D"
+      repo: "BEVDet"
+      branch: "dev3.0"
+      role: "单帧 BEV -> 时序 BEV (Ego-motion alignment 对照)"
+      training: false
+    - name: "BEVStereo"
+      repo: "BEVDet"
+      branch: "dev3.0"
+      role: "单目 depth cue vs temporal parallax vs cost volume"
+      training: false
+    - name: "BEVFormer V2"
+      repo: "BEVFormer"
+      role: "Perspective Supervision 技术演进教学"
+      training: false
+    - name: "OccNet"
+      repo: "OccNet"
+      role: "Occupancy 架构设计多样性补充教学"
+      training: false
+
+teaching_deliverables:
+  report_html: "artifacts/BEV_OCC_Learning_Report.html"
+  report_assets_dir: "artifacts/learning_report/"
+  scripts_dir: "scripts/visualization/"
+  sections_count: 10
+  visualizations_count: 27
