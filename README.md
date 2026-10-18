@@ -7,21 +7,36 @@
   <img src="https://img.shields.io/badge/OpenMMLab-MMCV%201.7.2%20%7C%20MMDet3D-blue" alt="MMCV">
   <img src="https://img.shields.io/badge/Dataset-nuScenes%20%7C%20Occ3D-orange" alt="nuScenes">
   <img src="https://img.shields.io/badge/Hardware-4%C3%97RTX%204090-brightgreen" alt="Hardware">
+  <img src="https://img.shields.io/badge/License-Apache--2.0-blue.svg" alt="License">
 </p>
 
-> **面向自动驾驶纯视觉 3D 感知岗位的全景复现、受控实验对比与交互式深度教学系统。**  
+> **面向自动驾驶纯视觉 3D 感知岗位的全景复现、真实受控实验对比与交互式深度教学系统。**  
 > 统一基座覆盖 **显式几何投影 (BEVDet / BEVDepth)**、**注意力逆向采样 (BEVFormer)**、**稀疏实例表征 (Sparse4D)** 及 **3D 占据网格 (BEVDet-Occ / SparseOcc)** 四大主流表征范式。
+
+---
+
+## 🎬 动态感知成果精选 (Dynamic Demonstrations)
+
+| 🚗 环视多路相机 3D 检测与连续追踪演进 | 🧊 4D 时序连续 Occupancy 语义体素流演进 |
+| :---: | :---: |
+| <img src="artifacts/learning_report/videos/bev_tracking_scene0061.webp" width="100%" alt="BEV 3D Tracking Demo"/> | <img src="artifacts/learning_report/videos/occupancy_temporal_flow.webp" width="100%" alt="Occupancy Temporal Flow Demo"/> |
+| **nuScenes scene-0061 连续 25 帧**：多路相机 3D 边界框空间投影、BEV 地面轨迹时序解算与跨相机连续追踪。 | **nuScenes scene-0061 连续 25 帧**：前视真实画面与 4D 时序连续 Occupancy 空间占据网格同步演进。 |
+
+| ⏱️ 连续帧自车运动补偿 (Ego-motion Alignment) 对齐对比 | 📡 环视 6 相机与 LiDAR 激光点云真实空间投影 |
+| :---: | :---: |
+| <img src="artifacts/learning_report/videos/temporal_ego_alignment.webp" width="100%" alt="Temporal Ego Alignment Demo"/> | <img src="artifacts/learning_report/images/lidar_projected_cameras.png" width="100%" alt="LiDAR Multi-Camera Projection"/> |
+| **未对齐 vs 自车位姿补偿对齐**：通过底盘 CAN 总线解算自车变换四元数，消除跨帧点云重影扩散。 | **空间几何严谨对齐**：32 线激光点云经刚体外参变换及相机内参投影，精准投射至 6 路环视画面。 |
 
 ---
 
 ## 🌟 项目核心亮点 (Core Highlights)
 
-1. **四大表征范式全景打通**：
-   - 彻底理清自动驾驶视觉 3D 感知在过去三年的技术演进脉络，告别单一算法的盲人摸象。
-2. **严格真实实验与受控消融**：
-   - 在真实 nuScenes / Occ3D 数据集上完成多轮多卡真实训练，产出受控指标（如 BEVDepth vs BEVDet 显式深度消融 +38.0% NDS），拒绝虚假汇报。
-3. **关键中间几何张量提取与追踪**：
-   - 实时截获并可视化视锥特征、深度概率分布、3D 参考点投影、900 个 3D 实例 Anchor 逐层修正轨迹及 3D 体素切片。
+1. **四大主流表征范式全景打通**：
+   - 系统梳理纯视觉 3D 感知在过去三年的核心演进主线：从显式几何投影 (LSS / BEVDepth)，到隐式注意力空间查询 (BEVFormer)，再到稀疏实例解耦 (Sparse4D) 与全场景占据网格 (BEVDet-Occ / SparseOcc)。
+2. **严谨的真实受控训练与消融实验**：
+   - 拒绝虚假宣称，在 4 卡 RTX 4090 集群上完成完整 Epochs 训练（如 BEVDepth vs BEVDet 12-epoch 严格受控消融，证明显式深度监督带来 **+38.0% NDS** 提升）。
+3. **关键中间几何张量流提取与追踪**：
+   - 完整抽取并可视化深度概率分布、视锥特征网格、3D 参考点投影、900 个 3D 实例 Anchor 逐层修正轨迹及 3D 占据体素切片。
 4. **单页离线全景教材系统 (`BEV_OCC_Learning_Report.html`)**：
    - 包含 12 个高密度图文章节、27 项高精度几何可视化、3D 点云与体素网格交互播放器，以及自动驾驶大厂面试真题库。
 5. **开箱即用的 4 份交互式 Jupyter Notebooks**：
@@ -55,9 +70,68 @@ nuScenes 6-Camera 环视图像输入 [B, 6, 3, H, W]
 
 ---
 
+## 🔬 四大范式深度拆解与实测输出 (In-depth Paradigm Analysis)
+
+### 范式一：显式几何投影 (BEVDet & BEVDepth)
+> **核心逻辑**：采用 Lift-Splat-Shoot (LSS) 思想，将 2D 像素特征乘以预测的离散深度分布构建 3D 视锥特征，再通过外参刚体变换与 Voxel Pooling 聚合至 BEV 稠密空间。
+
+<p align="center">
+  <img src="artifacts/learning_report/images/real/bevdepth/bevdepth_intermediate_chain.png" width="95%" alt="BEVDepth 7-Stage Full Pipeline"/>
+  <br>
+  <em>图 1: BEVDepth 端到端 7 级张量流提取全景（原始图像 ➔ LiDAR 投影 ➔ 深度分布 ➔ 视锥特征 ➔ Voxel Pooling ➔ BEV 特征 ➔ 3D 预测框）</em>
+</p>
+
+| LSS 视锥几何构建 (Camera Frustum Grid) | LiDAR 显式深度分布监督 (Depth Distribution) |
+| :---: | :---: |
+| <img src="artifacts/learning_report/images/camera_frustum_grid.png" width="90%" alt="Camera Frustum Grid"/> | <img src="artifacts/learning_report/images/bevdepth_depth_distribution.png" width="90%" alt="Depth Distribution"/> |
+| **视锥空间离散采样**：沿每个像素射线在预设深度区间 $[d_{min}, d_{max}]$ 构建视锥点网格。 | **消除纵向拉丝**：引入真实 LiDAR 点云投影监督 DepthNet，使得深度概率高度集中在目标表面。 |
+
+---
+
+### 范式二：隐式注意力空间查询 (BEVFormer)
+> **核心逻辑**：预设一组 2D BEV 网格查询向量 (Queries)，并在空间预设 3D 柱状参考点，通过内参外参反向投影到 2D 图像平面，利用可变形注意力 (Deformable Cross Attention) 逆向聚合多视角特征。
+
+| 空间交叉注意力机制 (Spatial Cross Attention) | BEVFormer 真实模型 3D 检测预测输出 |
+| :---: | :---: |
+| <img src="artifacts/learning_report/images/bevformer_spatial_cross_attention.png" width="90%" alt="BEVFormer SCA"/> | <img src="artifacts/learning_report/images/real/bevformer/bevformer_real_predictions.png" width="90%" alt="BEVFormer Real Predictions"/> |
+| **3D 立柱参考点逆向投影**：在每个 BEV Query 上取 4 个高度参考点，通过可变形注意力只关注投影相机的关键上下文。 | **注意力聚焦输出**：消除密集网格投影带来的外参误差累积，对远距离遮挡车辆展现出优秀的检测召回率。 |
+
+---
+
+### 范式三：稀疏目标实例表征 (Sparse4D)
+> **核心逻辑**：摆脱稠密 BEV 网格的构建与高显存负担，以“目标实例 (Instance)”为核心，直接在 3D 世界空间初始化 900 个稀疏 3D Anchor，通过 6 层解码器逐级细化几何位置与属性。
+
+| 稠密 BEV 网格 vs 稀疏实例表征对比 | 900 实例锚框 6 层迭代细化轨迹 (Anchor Refinement) |
+| :---: | :---: |
+| <img src="artifacts/learning_report/images/dense_bev_vs_sparse_instance.png" width="90%" alt="Dense BEV vs Sparse Instance"/> | <img src="artifacts/learning_report/images/real/sparse4d/sparse4d_anchor_refinement.png" width="90%" alt="Sparse4D Anchor Refinement"/> |
+| **计算复杂度本质飞跃**：稠密 BEV 计算量随感知范围呈平方 $O(R^2)$ 膨胀，而稀疏实例计算量仅取决于目标数量 $O(K \times P)$。 | **逐层微调逼近真值**：初始先验聚类锚框在 6 层 Decoder 中每层预测修正量 $(\Delta x, \Delta y, \Delta z)$，平滑收敛至真实目标。 |
+
+<p align="center">
+  <img src="artifacts/learning_report/images/real/sparse4d/sparse4d_real_predictions.png" width="85%" alt="Sparse4D Real Output"/>
+  <br>
+  <em>图 2: Sparse4D 真实推理 3D 目标边界框与多视角投影对齐</em>
+</p>
+
+---
+
+### 范式四：3D 语义占据网格 (BEVDet-Occ vs SparseOcc)
+> **核心逻辑**：解决 3D 边界框只能表征规则立方体目标的根本缺陷，将空间完全体素化，预测任意非刚体障碍物（如工程车、翻滚车辆、道路碎石、绿化带）的几何占据与 18 类语义。
+
+| 密集体素 vs 稀疏表面采样占据表征哲学 | Occ3D-nuScenes 真实 18 类语义体素真值 (Ground Truth) |
+| :---: | :---: |
+| <img src="artifacts/learning_report/images/dense_occ_vs_sparse_occ.png" width="90%" alt="Dense vs Sparse Occ"/> | <img src="artifacts/learning_report/images/occ3d_ground_truth_voxels.png" width="90%" alt="Occ3D GT Voxels"/> |
+| **90% 空间为空的物理先验**：Dense Occ 采用全空间 3D 卷积计算量巨大；SparseOcc 仅采样物体表面活跃体素，大幅缩减显存。 | **34,149 帧体素真值**：网格分辨率 $200 \times 200 \times 16$ (0.4m 体素)，包含车辆、行人、可行驶区域与可见性掩码。 |
+
+| BEVDet-Occ 稠密体素占据预测结果 | SparseOcc 稀疏表面体素占据预测结果 |
+| :---: | :---: |
+| <img src="artifacts/learning_report/images/real/bevdet_occ/bevdet_occ_real_dense_voxel.png" width="90%" alt="BEVDet-Occ Output"/> | <img src="artifacts/learning_report/images/real/sparseocc/sparseocc_real_dense_voxel.png" width="90%" alt="SparseOcc Output"/> |
+| **Dense Volume 结果**：通过 3D 卷积重建全局体素网格，完整补全几何盲区，验证集 mIoU 达 **44.71%**。 | **Sparse Query 结果**：利用稀疏采样聚焦高信息密度表面，兼具精细轮廓与极致推理速度，mIoU 达 **74.57%**。 |
+
+---
+
 ## 📊 模型库实测指标与硬件基准 (Benchmarks)
 
-### 1. 真实训练与感知精度对比 (Audited on nuScenes / Occ3D)
+### 1. 真实多轮训练感知精度对比 (Audited on nuScenes / Occ3D)
 
 | 模型范式 | 模型名称 | 任务类型 | 训练轮次与规格 | 核心指标 (mAP / NDS 或 mIoU) | 关键结论与收益 |
 |---|---|---|---|---|---|
@@ -68,7 +142,12 @@ nuScenes 6-Camera 环视图像输入 [B, 6, 3, H, W]
 | **Dense Occ** | **BEVDet-Occ R50** | 3D 占据 | 8 Full Epochs (648 steps) | **Occ3D mIoU: 44.71%** | 验证 3D 卷积在 Dense Volume 上的高显存开销与任意几何体素补全 |
 | **Sparse Occ** | **SparseOcc-v1.1 R50**| 3D 占据 | 8 Full Epochs (3,232 steps) | **Occ3D mIoU: 74.57%** | 针对 90% 空间为空的物理先验做稀疏采样，精度与效率双赢 |
 
-### 2. 硬件开销与吞吐 Profiling (单卡 NVIDIA RTX 4090 24GB)
+### 2. 硬件开销 Profiling (单卡 NVIDIA RTX 4090 24GB 实测)
+
+| 跨表征方案硬件开销雷达图 (Radar Profile) | 稠密网格 vs 稀疏关键点计算复杂度演进 |
+| :---: | :---: |
+| <img src="artifacts/learning_report/images/radar_model_profile.png" width="90%" alt="Radar Model Profile"/> | <img src="artifacts/learning_report/images/sparse_keypoint_complexity.png" width="90%" alt="Complexity Comparison"/> |
+| **多维指标平衡**：综合延迟 (Latency)、吞吐 (FPS)、显存占用与感知指标，直观展现不同算法在端侧量产落地的综合性价比。 | **远距离感知算力瓶颈**：密集 BEV 网格随感知距离扩大面临显存爆炸，稀疏化表征成为大范围感知的必然趋势。 |
 
 | 模型名称 | 输入分辨率 | 显存占用 (VRAM) | 单帧延迟 (Latency) | 吞吐帧率 (FPS) | 核心瓶颈分析 |
 |---|---|---|---|---|---|
